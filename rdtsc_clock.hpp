@@ -12,10 +12,10 @@ public:
 private:
     RDTSC_Clock();
     static double get_tsc_period();
-    static void sync(std::stop_token status, unsigned long long& time_since_boot);
+    static void sync(std::stop_token status, unsigned long long& boot_timestamp);
 
     static double tsc_time_period;
-    static unsigned long long time_since_boot;
+    static unsigned long long boot_timestamp;
     static unsigned int cpu_id;
     static std::jthread worker;
 };
