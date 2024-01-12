@@ -1,0 +1,92 @@
+chrono
+ Performance counter stats for './main' (10 runs):
+
+            119.85 msec task-clock                       #    0.997 CPUs utilized               ( +-  0.25% )
+                 1      context-switches                 #    8.344 /sec                        ( +- 31.45% )
+                 0      cpu-migrations                   #    0.000 /sec                      
+               123      page-faults                      #    1.026 K/sec                       ( +-  0.20% )
+       596,203,365      cpu_core/cycles/                 #    4.975 GHz                         ( +-  0.27% )
+     <not counted>      cpu_atom/cycles/                                                        (0.00%)
+       994,434,691      cpu_core/instructions/           #    1.67  insn per cycle              ( +-  0.00% )
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+       200,741,933      cpu_core/branches/               #    1.675 G/sec                       ( +-  0.00% )
+     <not counted>      cpu_atom/branches/                                                      (0.00%)
+            17,822      cpu_core/branch-misses/          #    0.01% of all branches             ( +-  0.50% )
+     <not counted>      cpu_atom/branch-misses/                                                 (0.00%)
+             TopdownL1 (cpu_core)                 #     60.7 %  tma_backend_bound      
+                                                  #      0.1 %  tma_bad_speculation    
+                                                  #      5.0 %  tma_frontend_bound     
+                                                  #     34.2 %  tma_retiring             ( +-  0.29% )
+
+          0.120181 +- 0.000302 seconds time elapsed  ( +-  0.25% )
+          
+rdtsc_clock
+ Performance counter stats for './main' (10 runs):
+
+            113.97 msec task-clock                       #    0.997 CPUs utilized               ( +-  0.19% )
+                 1      context-switches                 #    8.774 /sec                        ( +- 22.11% )
+                 0      cpu-migrations                   #    0.000 /sec                      
+               129      page-faults                      #    1.132 K/sec                       ( +-  0.14% )
+       566,524,089      cpu_core/cycles/                 #    4.971 GHz                         ( +-  0.07% )
+     <not counted>      cpu_atom/cycles/                                                        (0.00%)
+       194,601,688      cpu_core/instructions/           #    0.34  insn per cycle              ( +-  0.00% )
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+        50,772,396      cpu_core/branches/               #  445.501 M/sec                       ( +-  0.00% )
+     <not counted>      cpu_atom/branches/                                                      (0.00%)
+            19,242      cpu_core/branch-misses/          #    0.04% of all branches             ( +-  0.48% )
+     <not counted>      cpu_atom/branch-misses/                                                 (0.00%)
+             TopdownL1 (cpu_core)                 #     83.7 %  tma_backend_bound      
+                                                  #      0.0 %  tma_bad_speculation    
+                                                  #      1.7 %  tma_frontend_bound     
+                                                  #     14.6 %  tma_retiring             ( +-  0.29% )
+
+          0.114309 +- 0.000219 seconds time elapsed  ( +-  0.19% )
+          
+clock_gettime (CLOCK_REALTIME)
+ Performance counter stats for './main' (10 runs):
+
+            121.90 msec task-clock                       #    0.997 CPUs utilized               ( +-  0.19% )
+                 1      context-switches                 #    8.203 /sec                        ( +- 26.03% )
+                 0      cpu-migrations                   #    0.000 /sec                      
+               124      page-faults                      #    1.017 K/sec                       ( +-  0.24% )
+       606,557,313      cpu_core/cycles/                 #    4.976 GHz                         ( +-  0.16% )
+     <not counted>      cpu_atom/cycles/                                                        ( +-100.00% )  (0.00%)
+       895,458,923      cpu_core/instructions/           #    1.48  insn per cycle              ( +-  0.11% )
+     <not counted>      cpu_atom/instructions/                                                  ( +-100.00% )  (0.00%)
+       160,926,120      cpu_core/branches/               #    1.320 G/sec                       ( +-  0.11% )
+     <not counted>      cpu_atom/branches/                                                      ( +-100.00% )  (0.00%)
+            17,658      cpu_core/branch-misses/          #    0.01% of all branches             ( +-  1.55% )
+     <not counted>      cpu_atom/branch-misses/                                                 ( +-100.14% )  (0.00%)
+             TopdownL1 (cpu_core)                 #     67.5 %  tma_backend_bound      
+                                                  #      0.1 %  tma_bad_speculation    
+                                                  #      1.5 %  tma_frontend_bound     
+                                                  #     30.9 %  tma_retiring             ( +-  0.09% )
+
+          0.122238 +- 0.000253 seconds time elapsed  ( +-  0.21% )
+          
+clock_gettime (CLOCK_REALTIME_COARSE)
+ Performance counter stats for './main' (10 runs):
+
+             36.04 msec task-clock                       #    0.991 CPUs utilized               ( +-  3.36% )
+                 0      context-switches                 #    0.000 /sec                      
+                 0      cpu-migrations                   #    0.000 /sec                      
+               124      page-faults                      #    3.440 K/sec                       ( +-  0.21% )
+       178,820,327      cpu_core/cycles/                 #    4.961 GHz                         ( +-  3.40% )  (47.93%)
+        16,111,353      cpu_atom/cycles/                 #    0.447 GHz                         ( +-100.00% )  (8.79%)
+       742,956,804      cpu_core/instructions/           #    4.15  insn per cycle              ( +-  3.87% )  (47.93%)
+        43,940,384      cpu_atom/instructions/           #    0.25  insn per cycle              ( +-100.00% )  (17.45%)
+       146,358,297      cpu_core/branches/               #    4.061 G/sec                       ( +-  3.86% )  (47.93%)
+         8,667,082      cpu_atom/branches/               #  240.467 M/sec                       ( +-100.00% )  (25.85%)
+            19,240      cpu_core/branch-misses/          #    0.01% of all branches             ( +-  9.96% )  (47.93%)
+                77      cpu_atom/branch-misses/          #    0.00% of all branches             ( +-101.17% )  (34.51%)
+             TopdownL1 (cpu_core)                 #      0.6 %  tma_backend_bound      
+                                                  #      0.4 %  tma_bad_speculation    
+                                                  #     32.7 %  tma_frontend_bound     
+                                                  #     66.3 %  tma_retiring             ( +-  3.39% )  (47.93%)
+             TopdownL1 (cpu_atom)                 #     -0.5 %  tma_bad_speculation      ( +-100.00% )  (43.16%)
+                                                  #     39.8 %  tma_frontend_bound       ( +-100.00% )  (51.81%)
+                                                  #      2.3 %  tma_backend_bound      
+                                                  #      2.3 %  tma_backend_bound_aux    ( +-100.00% )  (52.07%)
+                                                  #     58.7 %  tma_retiring             ( +-100.00% )  (43.52%)
+
+           0.03636 +- 0.00121 seconds time elapsed  ( +-  3.33% )
