@@ -11,7 +11,7 @@ int main() {
     while (count--) {  
         //auto now = std::chrono::system_clock::now();
         //long long rdtscp_timestamp = RDTSC_Clock::now();
-        clock_gettime(CLOCK_REALTIME, &ts);
+        clock_gettime(CLOCK_REALTIME_COARSE, &ts);
         volatile long long system_timestamp = static_cast<long long>(ts.tv_sec*1e9) + ts.tv_nsec;
         //std::cout << "Delta: " << rdtscp_timestamp - system_timestamp << '\n';
     }
